@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170520203309) do
     t.integer "sale_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "producer_id"
+    t.index ["producer_id"], name: "index_products_on_producer_id"
   end
 
 end

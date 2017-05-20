@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :products, only: [:new, :create, :index] 
 
-  resources :sessions, only: :new
+  get '/sessions/new', to: 'sessions#new'
+  get '/sessions/destroy', to: 'sessions#destroy'
 end

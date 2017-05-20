@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
     case params[:role]
     when 'producer'
       session[:role] = :producer
+      session[:producer_id] = 1
     when 'retailer'
       session[:role] = :retailer
     when 'client'

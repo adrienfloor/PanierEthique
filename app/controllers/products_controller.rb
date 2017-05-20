@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
   def new
-    @product = Product.new
+    @product = producer.products.build
   end
   def create
-    @product = Product.new(product_params)
+    @product = producer.products.build(product_params)
     if @product.save
       redirect_to products_path
     else
@@ -16,5 +16,9 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:name, :quantity, :unit, :sale_price)
+  end
+
+  def producer
+    @producer ||= Producer.find(session[:producer_id])
   end
 end

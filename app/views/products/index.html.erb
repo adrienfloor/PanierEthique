@@ -1,0 +1,11 @@
+<% if @products.present? %>
+
+<% @products.each do |product| %>
+   <li> <%= product.name %> </li>
+<%end %>
+
+<% else %>
+
+<h6> Sorry, no products available </h6>
+
+<% end %>

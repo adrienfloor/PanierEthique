@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
       redirect_to products_path
     else
       render :new
-    end
+    end 
   end
   def index
     @products = Product.order(created_at: :desc).all

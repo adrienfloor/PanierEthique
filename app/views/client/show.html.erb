@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>
+        Nos produits locaux du jour
+    </h2>
+
+    <% if @products.present? %>
+
+    <% @products.each do |product| %>
+    <li>
+        <%= product.name %>
+    </li>
+    <%end %>
+
+<% else %>
+
+    <h6>
+        Désolé, il n'y a pas de produits disponibles.
+    </h6>
+
+    <% end %>
+
+    <%= button_to "Me déconnecter", new_product_path, method: :get %>
+</div>

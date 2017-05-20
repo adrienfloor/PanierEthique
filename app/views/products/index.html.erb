@@ -2,6 +2,8 @@
 
 <% @products.each do |product| %>
    <li> <%= product.name %> </li>
+   <li> <%= product.quantity %> <%= product.unit %> </li>
+   <li> <%= product.sale_price %>€ </li>
 <%end %>
 
 <% else %>

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resource :client, only: :show
   resource :retailer, only: :show
 
+  resources :stores, only: :index
+
   get '/sessions/new', to: 'sessions#new'
   get '/sessions/destroy', to: 'sessions#destroy'
 end

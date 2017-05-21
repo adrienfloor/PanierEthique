@@ -1,3 +1,45 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-product-button {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.2em;
+  background-color: #005691;
+  border-radius: 5px;
+  border: none;
+  padding: 4%;
+  margin-top: 6%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+.products-producer-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  border: 1px solid lightgrey;
+  background-color: #E8F1F5
+}
+
+.list-products-producer-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1em;
+  color: #004A7C;
+  width: 100%;
+}

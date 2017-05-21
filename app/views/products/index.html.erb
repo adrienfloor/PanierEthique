@@ -1,15 +1,32 @@
-<% if @products.present? %>
+<div class="main-container">
+    <div class="products-producer-index">
 
-<% @products.each do |product| %>
-   <li> <%= product.name %> </li>
-   <li> <%= product.quantity %> <%= product.unit %> </li>
-   <li> <%= product.sale_price %>€ </li>
-<%end %>
+        <% if @products.present? %>
 
-<% else %>
+        <% @products.each do |product| %>
+        <ul class="list-products-producer-index">
+        <li>Type de produit:
+            <%= product.name %>
+        </li>
+        <li>Quantité:
+            <%= product.quantity %>
+            <%= product.unit %>
+        </li>
+        <li>Prix:
+            <%= product.sale_price %>€
+        </li>
+      </ul>
+        <%end %>
 
-<h6> Sorry, no products available </h6>
+    <% else %>
 
-<% end %>
+        <h6>
+            Aucun produit enregistré pour l'instant.
+        </h6>
 
-<%= button_to "Ajouter un produit", new_product_path, method: :get %>
+        <% end %>
+
+        <%= button_to "Ajouter un produit", new_product_path, method: :get, :class => "add-product-button" %>
+
+    </div>
+</div>

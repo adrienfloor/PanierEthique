@@ -1,12 +1,14 @@
 <div class="main-container">
+  <div class="form-product">
 <%= simple_form_for @product do |f| %>
 <%= f.input :name %>
 <%= f.input :quantity %>
 <%= f.input :unit %>
 <%= f.input :sale_price %>
 <%= f.button :submit %>
-
-
 <% end %>
+  </div>
+
+
 
 </div>
